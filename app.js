@@ -32,13 +32,17 @@ const SYSTEM_PROMPT = `あなたは議事録作成の専門家です。
 ---
 メモが断片的でも、内容を推測して自然な日本語で整形してください。`;
 
+  
+// TODO: ここにAnthropicのAPIキーを入力してください
+const ANTHROPIC_API_KEY = "";
+
 function MinutesFormatter() {
   const [memo, setMemo] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
-  const [apiKey, setApiKey] = useState(localStorage.getItem("anthropic_api_key") || "");
+  const [apiKey, setApiKey] = useState(ANTHROPIC_API_KEY || localStorage.getItem("anthropic_api_key") || "");
   const resultRef = useRef(null);
 
   useEffect(() => {
@@ -116,18 +120,7 @@ function MinutesFormatter() {
       )
     ),
     e('main', null,
-      e('section', { style: { border: "1px dashed #c9a84c" } },
-        e('div', { className: 'api-key-container' },
-          e('span', { style: { fontSize: "12px", color: "#666" } }, 'Anthropic API Key:'),
-          e('input', {
-            id: 'api-key-input',
-            type: 'password',
-            value: apiKey,
-            onChange: (e) => setApiKey(e.target.value),
-            placeholder: 'sk-ant-...'
-          })
-        )
-      ),
+      // APIキー入力欄を非表示にしました
       e('section', null,
         e('div', { className: 'section-header' },
           e('span', { className: 'section-header-title' }, '📝 メモを貼り付ける'),
