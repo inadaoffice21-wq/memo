@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #f5f0e8;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #2c2c2c;
+}
+
+header {
+    background: #1a1a2e;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 3px solid #c9a84c;
+}
+
+.header-icon {
+    width: 44px;
+    height: 44px;
+    background: #c9a84c;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.header-title-container h1 {
+    color: #f5f0e8;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.header-title-container p {
+    color: #c9a84c;
+    font-size: 13px;
+    margin: 0;
+    letter-spacing: 0.08em;
+}
+
+main {
+    maxWidth: 860px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+section {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #d4c9b0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+}
+
+.section-header {
+    background: #1a1a2e;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header-title {
+    color: #f5f0e8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+    line-height: 1.8;
+    color: #2c2c2c;
+    resize: vertical;
+    box-sizing: border-box;
+    background: #fffef9;
+}
+
+.section-footer {
+    padding: 14px 20px;
+    border-top: 1px solid #e8e0d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf7f2;
+}
+
+.char-count {
+    color: #999;
+    font-size: 13px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #888;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #1a1a2e;
+    color: #fff;
+    border: none;
+    padding: 9px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    fontWeight: bold;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.loading-container {
+    background: #fff;
+    border: 1px solid #d4c9b0;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: #888;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+}
+
+.error-container {
+    background: #fff5f5;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    padding: 16px 20px;
+    color: #c0392b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.result-content {
+    padding: 28px 32px;
+    font-size: 15px;
+    line-height: 2;
+    color: #2c2c2c;
+    font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+    white-space: pre-wrap;
+    background: #fffef9;
+}
+
+.btn-copy {
+    border: none;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.footer-tip {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 36px;
+    letter-spacing: 0.05em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+/* API Key Input Styling */
+.api-key-container {
+    padding: 10px 20px;
+    background: #faf7f2;
+    border-bottom: 1px solid #e8e0d0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#api-key-input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #d4c9b0;
+    border-radius: 4px;
+    font-size: 13px;
+}
